@@ -13,6 +13,8 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
+    // jsoup HTML parser library @ https://jsoup.org/
+    implementation("org.jsoup:jsoup:1.14.1")
 }
 
 tasks.test {
