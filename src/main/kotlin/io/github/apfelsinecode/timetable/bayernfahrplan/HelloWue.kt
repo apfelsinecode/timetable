@@ -11,7 +11,7 @@ val sanderring = "3700348"
 val defaultData = mapOf(
     "is_fs" to "1",
     "is_xhr" to "True",
-    "nameInfo_dm" to wuerzburg
+    "nameInfo_dm" to sanderring
 )
 
 
@@ -20,9 +20,18 @@ fun main() {
     // println(doc)
     // println("#".repeat(32))
     val results = doc.getElementsByClass("results-tbody")
-    for (result in results) {
-        println(result)
-        println("#".repeat(64))
+//    for (result in results) {
+//        println(result)
+//        println("#".repeat(64))
+//    }
+    val table = results.first()
+    println(table)
+    println("\n".repeat(8))
+    if (table != null) {
+        for (child in table.children()) {
+            println(child)
+            println("#".repeat(64))
+        }
     }
     //println(results)
 }
